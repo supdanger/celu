@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador de Bonos con Imágenes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-neon">
+  <div class="background"></div>
+
+  <div class="app">
+    <!-- Barra superior -->
+    <div class="top-bar">
+      <div class="mascotas-img">
+        <img src="assets/dragon.png" alt="Dragón casino" class="mascota dragon">
+        <h1>BONOS</h1>
+        <img src="assets/zorro.png" alt="Zorro casino" class="mascota zorro">
+      </div>
+      <div class="temas">
+        <button onclick="setTheme('theme-neon')">Neón</button>
+        <button onclick="setTheme('theme-dark')">Oscuro</button>
+        <button onclick="setTheme('theme-retro')">Retro</button>
+        <button onclick="setTheme('theme-gold')">Dorado</button>
+        <button onclick="setTheme('theme-cyber')">Cyber</button>
+        <button onclick="setTheme('theme-violet')">Violeta</button>
+      </div>
+    </div>
+
+    <!-- Layout principal -->
+    <div class="main-layout">
+      <!-- Panel de botones -->
+      <div class="bonus-panel">
+        <button onclick="addBonus(1000)">1.000 GS</button>
+        <button onclick="addBonus(3000)">3.000 GS</button>
+        <button onclick="addBonus(7000)">7.000 GS</button>
+        <button onclick="addBonus(2000, 'recomendado')">2000 Recomendado</button>
+        <button onclick="addBonus(2000, 'recomendador')">2000 Recomendador</button>
+        <button onclick="addBonus(2000, 'derivacion')">2000 Derivación</button>
+      </div>
+
+      <!-- Panel de información -->
+      <div class="info-panel">
+        <div class="counter panel">
+          <h2>Contadores</h2>
+          <p><img src="assets/bonus1000.png" class="icon icon1000"> Bonos de 1000: <span id="count1000">0</span></p>
+          <p><img src="assets/bonus3000.png" class="icon icon3000"> Bonos de 3000: <span id="count3000">0</span></p>
+          <p><img src="assets/bonus7000.png" class="icon icon7000"> Bonos de 7000: <span id="count7000">0</span></p>
+          <p><img src="assets/bonus2000Recomendado.png" class="icon icon2000Recomendado"> Recomendado: <span id="count2000Recomendado">0</span></p>
+          <p><img src="assets/bonus2000Recomendador.png" class="icon icon2000Recomendador"> Recomendador: <span id="count2000Recomendador">0</span></p>
+          <p><img src="assets/bonus2000Derivacion.png" class="icon icon2000Derivacion"> Derivación: <span id="count2000Derivacion">0</span></p>
+          <p><img src="assets/total.png" class="icon iconTotal"> Total acumulado: <span id="total">0</span></p>
+        </div>
+
+        <div class="log panel">
+          <h2>Registro</h2>
+          <ul id="logList"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
